@@ -1,0 +1,297 @@
+> library(readxl)
+> ETH_USD <- read_excel("ETH-USD.csv")
+Error: Can't establish that the input is either xls or xlsx.
+> View(ETH_USD)
+Error in View : object 'ETH_USD' not found
+> library(readr)
+> ETH_USD <- read_csv("ETH-USD.csv")
+Parsed with column specification:
+cols(
+  Date = col_character(),
+  Close = col_double()
+)
+> View(ETH_USD)
+> mean(BTC_USD$Open)
+Error in mean(BTC_USD$Open) : object 'BTC_USD' not found
+> [1] 8730.523
+Error: unexpected '[' in "["
+> > x<-mean(BTC_USD$Low)
+Error: unexpected '>' in ">"
+> > y<-mean(BTC_USD$Low)
+Error: unexpected '>' in ">"
+> > x<-mean(BTC_USD$Close)
+Error: unexpected '>' in ">"
+> > hist(BTC_USD)
+Error: unexpected '>' in ">"
+> Error in hist.default(BTC_USD) : 'x' must be numeric
+Error: unexpected 'in' in "Error in"
+> > hist(x)
+Error: unexpected '>' in ">"
+> > hist BTC_USD(close)
+Error: unexpected '>' in ">"
+> Error: unexpected symbol in "hist BTC_USD"
+Error: unexpected symbol in "Error: unexpected symbol"
+> > hist(BTC_USD$Close)
+Error: unexpected '>' in ">"
+> > hist(close)
+Error: unexpected '>' in ">"
+> Error in hist.default(close) : 'x' must be numeric
+Error: unexpected 'in' in "Error in"
+> > hist(log(BTC_USD))
+Error: unexpected '>' in ">"
+> Error in Math.data.frame(BTC_USD) : 
+Error: unexpected 'in' in "Error in"
+>     non-numeric variable(s) in data frame: Date
+Error: unexpected symbol in "    non-numeric variable"
+> > hist(log(BTC_USD$Close))
+Error: unexpected '>' in ">"
+> > hist(log(BTC_USD$Low))
+Error: unexpected '>' in ">"
+> > plot((log(BTC_USD$Low)))
+Error: unexpected '>' in ">"
+> library(readr)
+> BTC_USD_3_ <- read_csv("BTC-USD (3).csv")
+Parsed with column specification:
+cols(
+  Date = col_character(),
+  Open = col_double(),
+  High = col_double(),
+  Low = col_double(),
+  Close = col_double(),
+  `Adj Close` = col_double(),
+  Volume = col_double()
+)
+> View(BTC_USD_3_)
+> library(readr)
+> LTC_USD <- read_csv("LTC-USD.csv")
+Parsed with column specification:
+cols(
+  Date = col_character(),
+  Open = col_double(),
+  High = col_double(),
+  Low = col_double(),
+  Close = col_double(),
+  `Adj Close` = col_double(),
+  Volume = col_double()
+)
+> View(LTC_USD)
+> library(readr)
+> ETH_USD_1_ <- read_csv("ETH-USD (1).csv")
+Parsed with column specification:
+cols(
+  Date = col_character(),
+  Open = col_double(),
+  High = col_double(),
+  Low = col_double(),
+  Close = col_double(),
+  `Adj Close` = col_double(),
+  Volume = col_double()
+)
+> View(ETH_USD_1_)
+> library(readr)
+> LULU <- read_csv("LULU.csv")
+Parsed with column specification:
+cols(
+  Date = col_character(),
+  Open = col_double(),
+  High = col_double(),
+  Low = col_double(),
+  Close = col_double(),
+  `Adj Close` = col_double(),
+  Volume = col_double()
+)
+> View(LULU)
+> #Merging Data Sets
+> Investments  merge(BTC_USD_3_, ETH_USD, LTC_USD, by="date,high")
+Error: unexpected symbol in "Investments  merge"
+> Investments <- merge(BTC_USD_3_, ETH_USD, LTC_USD, by="date,high")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD_3_, ETH_USD, LTC_USD, by="Date,High")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> library(readr)
+> BTC_USD <- read_csv("BTC-USD.csv")
+Parsed with column specification:
+cols(
+  DATE = col_character(),
+  OPEN = col_double(),
+  HIGH = col_double(),
+  LOW = col_double(),
+  CLOSE = col_double(),
+  ADJ_CLOSE = col_double(),
+  VOL = col_double()
+)
+> View(BTC_USD)
+> library(readr)
+> ETH_USD <- read_csv("ETH-USD.csv")
+Parsed with column specification:
+cols(
+  DATE = col_character(),
+  OPEN = col_double(),
+  HIGH = col_double(),
+  LOW = col_double(),
+  CLOSE = col_double(),
+  ADJ_CLOSE = col_double(),
+  VOL = col_double()
+)
+> View(ETH_USD)
+> library(readr)
+> LTC_USD <- read_csv("LTC-USD.csv")
+Parsed with column specification:
+cols(
+  DATE = col_character(),
+  OPEN = col_double(),
+  HIGH = col_double(),
+  LOW = col_double(),
+  CLOSE = col_double(),
+  ADJ_CLOSE = col_double(),
+  VOL = col_double()
+)
+> View(LTC_USD)
+> Investments <- merge(BTC_USD_3_, ETH_USD, LTC_USD, by="Date,High")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="Date, High")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="Date, High")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="Date")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="OPEN")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by "OPEN")
+Error: unexpected string constant in "Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by "OPEN""
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="OPEN")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="2")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="open")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD,ETH_USD,LTC_USD,by="open")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> Investments <- merge(BTC_USD,ETH_USD,LTC_USD,by="open")
+Error in fix.by(by.x, x) : 
+  'by' must specify one or more columns as numbers, names or logical
+> mymergedata1 <- merge(x = BTC_USD, y = ETH_USD, by = "open","adj_close")
+Error in fix.by(by.x, x) : 'by' must specify a uniquely valid column
+> data(btc_usd)
+Warning message:
+In data(btc_usd) : data set ‘btc_usd’ not found
+> data btc_usd
+Error: unexpected symbol in "data btc_usd"
+> BTC_USD
+# A tibble: 366 x 7
+   DATE       OPEN  HIGH   LOW CLOSE ADJ_CLOSE       VOL
+   <chr>     <dbl> <dbl> <dbl> <dbl>     <dbl>     <dbl>
+ 1 9/26/2018 6438. 6544. 6383. 6463.     6463. 264402806
+ 2 9/27/2018 6463. 6734. 6435. 6686.     6686. 345096700
+ 3 9/28/2018 6686. 6806. 6545. 6635.     6635. 497340510
+ 4 9/29/2018 6635. 6635. 6474. 6604.     6604. 245055396
+ 5 9/30/2018 6604. 6742. 6544. 6624.     6624. 174302164
+ 6 10/1/2018 6624. 6663. 6511. 6595.     6595. 256959931
+ 7 10/2/2018 6595. 6619. 6478. 6525.     6525. 267166277
+ 8 10/3/2018 6525. 6537. 6429. 6492.     6492. 306385346
+ 9 10/4/2018 6493. 6622. 6487. 6580.     6580. 277614018
+10 10/5/2018 6580  6684. 6547. 6633.     6633. 262562344
+# … with 356 more rows
+> plot(BTC_USD)
+Error in plot.window(...) : need finite 'xlim' values
+In addition: Warning messages:
+1: In data.matrix(x) : NAs introduced by coercion
+2: In min(x) : no non-missing arguments to min; returning Inf
+3: In max(x) : no non-missing arguments to max; returning -Inf
+4: In min(x) : no non-missing arguments to min; returning Inf
+5: In max(x) : no non-missing arguments to max; returning -Inf
+> plot(BTC_USD$ADJ_CLOSE)
+> line (BTC_USD$ADJ_CLOSE)
+
+Call:
+line(BTC_USD$ADJ_CLOSE)
+
+Coefficients:
+[1]  1692.65    24.78
+
+> plot(BTC_USD$ADJ_CLOSE)
+> plot(BTC_USD,ETH_USD)
+Error in plot.window(...) : need finite 'xlim' values
+In addition: Warning messages:
+1: In data.matrix(x) : NAs introduced by coercion
+2: In min(x) : no non-missing arguments to min; returning Inf
+3: In max(x) : no non-missing arguments to max; returning -Inf
+4: In min(x) : no non-missing arguments to min; returning Inf
+5: In max(x) : no non-missing arguments to max; returning -Inf
+> plot(BTC_USD,ETH_USD$ADJ_CLOSE)
+Error in plot.window(...) : need finite 'xlim' values
+In addition: Warning messages:
+1: In data.matrix(x) : NAs introduced by coercion
+2: In min(x) : no non-missing arguments to min; returning Inf
+3: In max(x) : no non-missing arguments to max; returning -Inf
+4: In min(x) : no non-missing arguments to min; returning Inf
+5: In max(x) : no non-missing arguments to max; returning -Inf
+> plot(BTC_USD,ETH_USD$ADJ_CLOSE)
+Error in plot.window(...) : need finite 'xlim' values
+In addition: Warning messages:
+1: In data.matrix(x) : NAs introduced by coercion
+2: In min(x) : no non-missing arguments to min; returning Inf
+3: In max(x) : no non-missing arguments to max; returning -Inf
+4: In min(x) : no non-missing arguments to min; returning Inf
+5: In max(x) : no non-missing arguments to max; returning -Inf
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE)
+> 
+> ggplot(BTC_USD)
+Error in ggplot(BTC_USD) : could not find function "ggplot"
+> table(BTC_USD)
+Error in table(BTC_USD) : attempt to make a table with >= 2^31 elements
+> barplot(table(BTC_USD))
+Error in table(BTC_USD) : attempt to make a table with >= 2^31 elements
+> barplot(ETH_USD)
+Error in barplot.default(ETH_USD) : 'height' must be a vector or a matrix
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE)
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab'Etherium')
+Error: unexpected string constant in "plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab'Etherium'"
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium')
+> main='Bitcoin versus Etherium'
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium')pch=20
+Error: unexpected symbol in "plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium')pch"
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20)
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 col=red)
+Error: unexpected symbol in "plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 col"
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 ,col='red')
+> points(BTC_USD, col='blue')
+Warning message:
+In data.matrix(x) : NAs introduced by coercion
+> points([BTC_USD], col='blue')
+Error: unexpected '[' in "points(["
+> 
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 ,col='red')
+> points(BTC_USD, pch=20, col='blue')
+Warning message:
+In data.matrix(x) : NAs introduced by coercion
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
+> points([BTC_USD], col='blue')
+Error: unexpected '[' in "points(["
+> points([ETH_USD], col='green')
+Error: unexpected '[' in "points(["
+> points([BTC_USD], col='red')
+Error: unexpected '[' in "points(["
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='green')
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='green')
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='green')
+> points(ylab='Ethereum', pch=20 ,col='blue')
+Error in xy.coords(x, y) : argument "x" is missing, with no default
+> points(ylab='Ethereum', pch=20 ,col='blue')
+Error in xy.coords(x, y) : argument "x" is missing, with no default
+> xlab = 'Bitcoin', pch=20, col='blue', ylab='Ethereum', pch=20 ,col='green')
+Error: unexpected ',' in "xlab = 'Bitcoin',"
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
+> plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
+> points(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
