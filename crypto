@@ -149,40 +149,7 @@ cols(
   VOL = col_double()
 )
 > View(LTC_USD)
-> Investments <- merge(BTC_USD_3_, ETH_USD, LTC_USD, by="Date,High")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="Date, High")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="Date, High")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="Date")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="OPEN")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by "OPEN")
-Error: unexpected string constant in "Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by "OPEN""
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="OPEN")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="2")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD, ETH_USD, LTC_USD, by="open")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD,ETH_USD,LTC_USD,by="open")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> Investments <- merge(BTC_USD,ETH_USD,LTC_USD,by="open")
-Error in fix.by(by.x, x) : 
-  'by' must specify one or more columns as numbers, names or logical
-> mymergedata1 <- merge(x = BTC_USD, y = ETH_USD, by = "open","adj_close")
-Error in fix.by(by.x, x) : 'by' must specify a uniquely valid column
+> Investments <- merge(BTC_USD_3_, ETH_USD, LTC_Error in fix.by(by.x, x) : 'by' must specify a uniquely valid column
 > data(btc_usd)
 Warning message:
 In data(btc_usd) : data set ‘btc_usd’ not found
@@ -222,76 +189,55 @@ Coefficients:
 
 > plot(BTC_USD$ADJ_CLOSE)
 > plot(BTC_USD,ETH_USD)
-Error in plot.window(...) : need finite 'xlim' values
-In addition: Warning messages:
-1: In data.matrix(x) : NAs introduced by coercion
-2: In min(x) : no non-missing arguments to min; returning Inf
-3: In max(x) : no non-missing arguments to max; returning -Inf
-4: In min(x) : no non-missing arguments to min; returning Inf
-5: In max(x) : no non-missing arguments to max; returning -Inf
-> plot(BTC_USD,ETH_USD$ADJ_CLOSE)
-Error in plot.window(...) : need finite 'xlim' values
-In addition: Warning messages:
-1: In data.matrix(x) : NAs introduced by coercion
-2: In min(x) : no non-missing arguments to min; returning Inf
-3: In max(x) : no non-missing arguments to max; returning -Inf
-4: In min(x) : no non-missing arguments to min; returning Inf
-5: In max(x) : no non-missing arguments to max; returning -Inf
-> plot(BTC_USD,ETH_USD$ADJ_CLOSE)
-Error in plot.window(...) : need finite 'xlim' values
-In addition: Warning messages:
-1: In data.matrix(x) : NAs introduced by coercion
-2: In min(x) : no non-missing arguments to min; returning Inf
-3: In max(x) : no non-missing arguments to max; returning -Inf
-4: In min(x) : no non-missing arguments to min; returning Inf
-5: In max(x) : no non-missing arguments to max; returning -Inf
+
+
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE)
 > 
 > ggplot(BTC_USD)
-Error in ggplot(BTC_USD) : could not find function "ggplot"
+
 > table(BTC_USD)
-Error in table(BTC_USD) : attempt to make a table with >= 2^31 elements
+
 > barplot(table(BTC_USD))
-Error in table(BTC_USD) : attempt to make a table with >= 2^31 elements
-> barplot(ETH_USD)
-Error in barplot.default(ETH_USD) : 'height' must be a vector or a matrix
+
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE)
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab'Etherium')
-Error: unexpected string constant in "plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab'Etherium'"
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium')
 > main='Bitcoin versus Etherium'
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium')pch=20
-Error: unexpected symbol in "plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium')pch"
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20)
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 col=red)
-Error: unexpected symbol in "plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 col"
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 ,col='red')
 > points(BTC_USD, col='blue')
 Warning message:
 In data.matrix(x) : NAs introduced by coercion
 > points([BTC_USD], col='blue')
-Error: unexpected '[' in "points(["
+
 > 
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Etherium', pch=20 ,col='red')
 > points(BTC_USD, pch=20, col='blue')
 Warning message:
-In data.matrix(x) : NAs introduced by coercion
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
 > points([BTC_USD], col='blue')
-Error: unexpected '[' in "points(["
+
 > points([ETH_USD], col='green')
-Error: unexpected '[' in "points(["
+
 > points([BTC_USD], col='red')
-Error: unexpected '[' in "points(["
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='green')
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='green')
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='green')
 > points(ylab='Ethereum', pch=20 ,col='blue')
-Error in xy.coords(x, y) : argument "x" is missing, with no default
+
 > points(ylab='Ethereum', pch=20 ,col='blue')
-Error in xy.coords(x, y) : argument "x" is missing, with no default
+
 > xlab = 'Bitcoin', pch=20, col='blue', ylab='Ethereum', pch=20 ,col='green')
-Error: unexpected ',' in "xlab = 'Bitcoin',"
+
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
 > plot(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
 > points(BTC_USD$ADJ_CLOSE,ETH_USD$ADJ_CLOSE, xlab = 'Bitcoin', ylab='Ethereum', pch=20 ,col='blue')
